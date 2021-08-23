@@ -845,7 +845,7 @@ img::selection {
 
 .c-section-programm {
   width: 100%;
-  height: 71rem;
+  height: auto;
   background: -o-linear-gradient(151.72deg, rgba(222, 242, 220, 0.33) 30.24%, rgba(244, 255, 243, 0.81) 91.19%);
   background: linear-gradient(298.28deg, rgba(222, 242, 220, 0.33) 30.24%, rgba(244, 255, 243, 0.81) 91.19%);
   margin-top: 10rem;
@@ -870,12 +870,13 @@ img::selection {
 }
 
 .c-card-md {
+  position: relative;
   width: 50rem;
   height: 40rem;
   background: #fff;
   -webkit-box-shadow: 0px 5px 18px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 5px 18px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
+  border-radius: 1.5rem;
   padding: 3rem 4.5rem;
 }
 
@@ -893,6 +894,11 @@ img::selection {
   max-height: 21.6rem;
   margin-bottom: 1rem;
   overflow: scroll;
+}
+
+.c-card-md .c-card-md__btn {
+  position: absolute;
+  bottom: 3rem;
 }
 
 .c-card-md .c-card-md__btn .c-gradient-btn {
@@ -2324,6 +2330,19 @@ img::selection {
   }
 }
 
+@media (max-width: 1070px) {
+  .c-section-programm .c-section-programm_card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .c-card-md {
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
 @media (max-width: 1050px) {
   .c-header .c-header-logo-obj {
     margin-top: 2.4rem;
@@ -2425,6 +2444,10 @@ img::selection {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .c-section-programm .c-section-programm__title {
+    font-size: 3rem;
   }
 }
 
@@ -2645,5 +2668,37 @@ img::selection {
     font-size: 0.7rem;
     line-height: 0.9rem;
     max-width: 18rem;
+  }
+
+  .c-section-programm .c-section-programm__title {
+    font-size: 2rem;
+  }
+
+  .c-card-md {
+    width: 29rem;
+    height: 30rem;
+    border-radius: 1rem;
+    padding: 3rem 2.4rem 2.5rem 2.1rem;
+  }
+
+  .c-card-md .c-card-md__title {
+    font-size: 2rem;
+  }
+
+  .c-card-md .c-card-md__desc {
+    min-height: 11rem;
+    max-height: 13rem;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .c-card-md .c-card-md__btn .c-gradient-btn {
+    width: 13rem;
+    height: 4rem;
+    border-radius: 0.8rem;
+  }
+
+  .c-card-md .c-card-md__btn .c-gradient-btn .c-gradient-btn__txt {
+    font-size: 1.3rem;
   }
 }
