@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
             itemSelctor: '.c-section-gallery-block__item ',
             columWidth: sizer,
             percentPosition: true,
-            gutter: 6
+            gutter: 6,
         });
     });
 });
