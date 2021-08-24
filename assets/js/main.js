@@ -182,6 +182,7 @@ burger.addEventListener('click', event => {
 }) 
 burgerItems.forEach(item => {
 	item.addEventListener('click', event => {
+		 sidebar.classList.remove('active-sidebar')
     document.body.classList.remove('active-burger')
     
 })
