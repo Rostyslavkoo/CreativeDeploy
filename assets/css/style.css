@@ -1218,10 +1218,11 @@ img::selection {
 }
 
 .c-section-question {
-  height: 84rem;
+  height: auto;
   background: #201E1E;
   position: relative;
   padding-top: 10.5rem;
+  padding-bottom: 10rem;
 }
 
 .c-section-question .c-section-question__img {
@@ -1235,18 +1236,22 @@ img::selection {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 90%;
   bottom: 0;
   left: 0;
   background: -o-linear-gradient(359.62deg, #201E1E -19.82%, rgba(32, 30, 30, 0.1) 147.52%);
   background: linear-gradient(90.38deg, #201E1E -19.82%, rgba(32, 30, 30, 0.1) 147.52%);
   z-index: 1;
+  overflow: hidden;
 }
 
 .c-section-question .c-section-question__title {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 4rem;
   color: #fff;
+  shape-outside: url("../img/fno.webp");
+  -webkit-clip-path: url("../img/fno.webp");
+          clip-path: url("../img/fno.webp");
 }
 
 .c-section-question .c-section-question__input {
@@ -1258,6 +1263,14 @@ img::selection {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 3rem;
+}
+
+.c-section-question .c-section-question__input .c-input-block .c-input:focus {
+  border-bottom: 2px solid #fff;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  color: #fff;
 }
 
 .c-input-block {
@@ -1281,7 +1294,8 @@ img::selection {
 
 .c-input-block .c-input {
   padding-left: 0.4rem;
-  width: 36rem;
+  max-width: 36rem;
+  width: 100%;
   height: 40px;
   background: transparent;
   outline: none;
@@ -1381,7 +1395,8 @@ img::selection {
 }
 
 .c-textarea-block .c-textarea {
-  width: 80rem;
+  max-width: 80rem;
+  width: 100%;
   max-height: 10rem;
   min-height: 10rem;
   background: transparent;
@@ -1389,7 +1404,7 @@ img::selection {
   border: none;
   color: #BDBBBB;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 2.5rem;
   line-height: 30px;
   letter-spacing: 0.02em;
   border-bottom: 2px solid #BDBBBB;
@@ -2318,6 +2333,28 @@ img::selection {
   }
 }
 
+@media (max-width: 1300px) {
+  .c-section-question .c-section-question__input {
+    display: block;
+  }
+
+  .c-section-question .c-section-question__input .c-input-block .c-input__title {
+    font-size: 2rem;
+  }
+
+  .c-textarea-block {
+    max-width: 43rem;
+  }
+
+  .c-textarea-block .c-textarea__title {
+    font-size: 2rem;
+  }
+
+  .c-textarea-block .c-textarea {
+    max-width: 36rem;
+  }
+}
+
 @media (max-width: 1270px) {
   .c-container {
     padding: 0 2rem;
@@ -2469,6 +2506,11 @@ img::selection {
     max-width: 36rem;
     line-height: 3rem;
   }
+
+  .c-section-question .c-section-question__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 @media (max-width: 815px) {
@@ -2612,6 +2654,20 @@ img::selection {
   }
 }
 
+@media (max-width: 750px) {
+  .c-section-question .c-section-question__img img {
+    height: 60rem;
+  }
+
+  .c-section-question .c-section-question__img {
+    right: -6rem;
+  }
+
+  .c-section-question .c-section-checkbox .c-seaction-checkbox__title {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 700px) {
   .c-section-sign-block .c-container .c-section-sign-block__title {
     font-size: 15px;
@@ -2712,6 +2768,44 @@ img::selection {
 
   .sizer4 {
     width: 12rem;
+  }
+}
+
+@media (max-width: 464px) {
+  .c-section-question .c-section-question__input .c-input-block {
+    margin-top: 5rem;
+  }
+
+  .c-section-question .c-section-question__input .c-input-block .c-input__title {
+    font-size: 1rem;
+    top: 1rem;
+  }
+
+  .c-section-question .c-section-question__input .c-input-block .c-input:focus + .c-input__title {
+    top: -1rem;
+  }
+
+  .c-section-question .c-section-question__input .c-input-block .c-input {
+    font-size: 1rem;
+  }
+
+  .c-textarea-block .c-textarea__title {
+    font-size: 1rem;
+  }
+
+  .c-textarea-block .c-textarea {
+    font-size: 1rem;
+    padding-right: 10rem;
+    line-height: 15px;
+  }
+
+  .c-textarea-block .c-textarea:focus + .c-textarea__title {
+    font-size: 1rem;
+    top: -1rem;
+  }
+
+  .c-textarea-block .c-textarea__btn {
+    top: 0;
   }
 }
 
@@ -2854,6 +2948,14 @@ img::selection {
   .c-section-review-wrapper .c-section-review__title {
     font-size: 2rem;
     line-height: 25px;
+  }
+
+  .c-section-question {
+    padding-top: 4.5rem;
+  }
+
+  .c-section-question .c-section-question__title {
+    font-size: 2rem;
   }
 }
 
