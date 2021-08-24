@@ -165,5 +165,20 @@ function closeModal(currentModal) {
         modalContent.removeAttribute('style')
 
 }
+const burger = document.getElementById('sidebarToggle')
+const sidebar = document.getElementById('sidebar')
+
+const burgerItems = document.querySelectorAll('.c-burger__item')
+
+burger.addEventListener('click', event => {
+    document.body.classList.toggle('active-burger')
+
+}) 
+burgerItems.forEach(item => {
+	item.addEventListener('click', event => {
+    document.body.classList.remove('active-burger')
+    
+})
+	})
 
 
