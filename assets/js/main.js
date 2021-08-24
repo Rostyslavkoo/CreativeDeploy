@@ -171,7 +171,13 @@ const sidebar = document.getElementById('sidebar')
 const burgerItems = document.querySelectorAll('.c-burger__item')
 
 burger.addEventListener('click', event => {
+	  sidebar.classList.toggle('active-sidebar')
+
+	setTimeout(() =>{
     document.body.classList.toggle('active-burger')
+
+
+	},1)
 
 }) 
 burgerItems.forEach(item => {

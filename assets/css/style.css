@@ -292,6 +292,9 @@ img::selection {
   background: -o-linear-gradient(167.59deg, #F46362 49.38%, #F26788 89.69%);
   background: linear-gradient(282.41deg, #F46362 49.38%, #F26788 89.69%);
   left: 0;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .c-header .c-burger span::before,
@@ -2435,22 +2438,21 @@ img::selection {
   border-top-left-radius: 5rem;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateX(80%);
-      -ms-transform: translateX(80%);
-          transform: translateX(80%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   opacity: 0;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
+  visibility: hidden;
 }
 
 .c-sidebar .c-nav {
@@ -2482,6 +2484,13 @@ img::selection {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
+}
+
+.c-sidebar.active-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
 }
 
 .active-burger .c-sidebar {
@@ -3232,5 +3241,12 @@ img::selection {
 @media (max-width: 321px) {
   .c-section-gallery .c-section-gallery__block {
     max-width: 12rem;
+  }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 3000px) {
+  .c-sidebar {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
