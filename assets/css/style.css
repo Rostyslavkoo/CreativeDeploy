@@ -3014,6 +3014,11 @@ img::selection {
     margin-left: 1rem;
   }
 
+  .footer .c-container .c-footer__logo {
+    margin: 2rem;
+    margin-top: 5rem;
+  }
+
   .footer .c-container .c-footer__logo img {
     max-width: 4rem;
     min-width: 4rem;
