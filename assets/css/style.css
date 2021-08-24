@@ -893,7 +893,7 @@ img::selection {
   min-height: 21.6rem;
   max-height: 21.6rem;
   margin-bottom: 1rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .c-card-md .c-card-md__btn {
@@ -932,6 +932,7 @@ img::selection {
 .c-section-gallery .c-section-gallery__block {
   height: auto;
   margin: auto;
+  max-width: 105rem;
 }
 
 .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item {
@@ -1006,7 +1007,7 @@ img::selection {
 }
 
 .sizer4 {
-  width: 25%;
+  width: 25rem;
 }
 
 .c-section-sign-block {
@@ -2345,6 +2346,12 @@ img::selection {
   }
 }
 
+@media (max-width: 1058px) {
+  .c-section-gallery .c-section-gallery__block {
+    max-width: 80rem;
+  }
+}
+
 @media (max-width: 1050px) {
   .c-header .c-header-logo-obj {
     margin-top: 2.4rem;
@@ -2577,6 +2584,10 @@ img::selection {
 }
 
 @media (max-width: 800px) {
+  .c-section-gallery .c-section-gallery__block {
+    max-width: 65rem;
+  }
+
   .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item {
     border-radius: 0.5rem;
   }
@@ -2590,7 +2601,7 @@ img::selection {
   }
 
   .sizer4 {
-    width: 35%;
+    width: 20rem;
   }
 }
 
@@ -2608,6 +2619,26 @@ img::selection {
 
   .c-section-sign-block .c-container .c-section-sign-block__btn .c-gradient-btn .c-gradient-btn__txt {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .c-section-gallery .c-section-gallery__block {
+    max-width: 45rem;
+  }
+
+  .sizer4 {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 472px) {
+  .c-section-gallery .c-section-gallery__block {
+    max-width: 25rem;
+  }
+
+  .sizer4 {
+    width: 12rem;
   }
 }
 
@@ -2746,20 +2777,10 @@ img::selection {
   .c-section-gallery .c-section-gallery__title {
     font-size: 2rem;
   }
+}
 
-  .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item {
-    border-radius: 0.3rem;
-  }
-
-  .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item img {
-    border-radius: 0.3rem;
-  }
-
-  .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item::before {
-    border-radius: 0.3rem;
-  }
-
-  .sizer4 {
-    width: 45%;
+@media (max-width: 321px) {
+  .c-section-gallery .c-section-gallery__block {
+    max-width: 12rem;
   }
 }
