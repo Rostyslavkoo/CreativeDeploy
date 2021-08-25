@@ -1820,8 +1820,6 @@ img::selection {
   left: 0;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
