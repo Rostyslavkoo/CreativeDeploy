@@ -3057,9 +3057,13 @@ img::selection {
     line-height: 1.5rem;
   }
 
+  .c-modal .c-modal__content .c-modal-content-input-block .c-input-block {
+    margin-top: 2rem;
+  }
+
   .c-modal .c-modal__content .c-modal-content-input-block .c-input-block .c-input__title {
     font-size: 1rem;
-    top: 0;
+    top: 1rem;
   }
 
   .c-modal .c-modal__content .c-modal-content-input-block .c-input-block .c-input {
@@ -3068,15 +3072,15 @@ img::selection {
   }
 
   .c-modal .c-modal__content .c-modal-content-input-block .c-input-block .c-input:focus + .c-input__title {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .c-modal .c-modal__content .c-modal-content-input-block .c-input-block .c-input:not(:focus):valid ~ .c-input__title {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .c-modal .c-modal__content .c-modal-content-input-block .c-input-block .c-input[type=date]:invalid ~ .c-input__title {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .c-modal .c-modal__content .c-modal-content-btn .c-gradient-btn {
@@ -3087,6 +3091,10 @@ img::selection {
 
   .c-modal .c-modal__content .c-modal-content-btn .c-gradient-btn .c-gradient-btn__txt {
     font-size: 1rem;
+  }
+
+  .c-modal .c-modal__content .c-modal-content-checkbox {
+    margin-top: 1rem;
   }
 
   .c-modal .c-modal__content .c-modal-content-checkbox .c-container-checkbox {
