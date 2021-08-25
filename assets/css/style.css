@@ -2164,7 +2164,7 @@ img::selection {
 
 .c-modal-programme .c-modal .c-modal__content .c-modal-content__title {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 4rem;
   line-height: 56px;
   /* identical to box height, or 140% */
   text-align: center;
@@ -2178,9 +2178,9 @@ img::selection {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn {
@@ -2549,6 +2549,12 @@ img::selection {
   }
 }
 
+@media (max-width: 1154px) {
+  .c-modal-programme .c-modal .c-modal__content {
+    max-width: 80rem;
+  }
+}
+
 @media (max-width: 1100px) {
   .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item:hover i {
     display: none;
@@ -2638,6 +2644,42 @@ img::selection {
     height: 20rem;
   }
 
+  .c-modal-programme .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn {
+    max-width: 16rem;
+    height: 10rem;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn .c-card-btn__inner::after {
+    border-radius: 1rem;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn .c-card-btn__inner {
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 2px 5px 2px #F36783;
+            box-shadow: 0px 2px 5px 2px #F36783;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn .c-card-btn__inner .c-card-btn__title {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn.online .c-card-btn__inner {
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 2px 5px 2px #BAD9B6;
+            box-shadow: 0px 2px 5px 2px #BAD9B6;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content {
+    max-width: 50rem;
+    padding: 1rem;
+  }
+
   .c-wrapper-programm {
     left: 20%;
     max-width: 25rem;
@@ -2661,6 +2703,15 @@ img::selection {
 
   .c-slider-arrow__inner {
     top: -3rem;
+  }
+}
+
+@media (max-width: 1000px) and (max-width: 661px) {
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn {
+    width: 20rem;
+    height: 10rem;
+    margin: 0;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2712,6 +2763,10 @@ img::selection {
 }
 
 @media (max-width: 927px) {
+  .c-modal-format .c-modal .c-modal__content {
+    padding-bottom: 0;
+  }
+
   .c-modal-format .c-modal .c-modal__content .c-modal-content__title {
     font-size: 2.5rem;
   }
@@ -2950,6 +3005,31 @@ img::selection {
   }
 }
 
+@media (max-width: 661px) {
+  .c-modal-programme .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 2rem;
+    margin: 0 1rem;
+    line-height: 2rem;
+    margin: 2rem;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn .c-card-btn__inner::after {
+    border-radius: 2rem;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn .c-card-btn__inner {
+    border-radius: 2rem;
+  }
+
+  .c-modal-programme .c-modal .c-modal__content {
+    max-width: 30rem;
+    padding: 1rem;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
+
 @media (max-width: 650px) {
   .c-section-gallery .c-section-gallery__block {
     max-width: 45rem;
@@ -3066,30 +3146,7 @@ img::selection {
     max-height: 14.5rem;
     overflow-y: scroll;
   }
-}
 
-@media (max-width: 550px) {
-  .c-modal-format .c-modal .c-modal__content .c-modal-content__title {
-    font-size: 2rem;
-  }
-
-  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn {
-    width: 20rem;
-    height: 15rem;
-    margin: 0;
-    margin-bottom: 2rem;
-  }
-
-  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn .c-card-btn__inner .c-card-btn__title {
-    font-size: 2rem;
-  }
-
-  .c-modal-format .c-modal .c-modal__content {
-    max-width: 30rem;
-  }
-}
-
-@media (max-width: 525px) {
   .c-modal .c-modal__content {
     max-width: 30rem;
     padding: 3rem 5rem;
@@ -3174,6 +3231,27 @@ img::selection {
   .c-modal .c-modal__content .c-modal__close img {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .c-modal-format .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 2rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn {
+    width: 20rem;
+    height: 10rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn .c-card-btn__inner .c-card-btn__title {
+    font-size: 2rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content {
+    max-width: 30rem;
   }
 }
 
