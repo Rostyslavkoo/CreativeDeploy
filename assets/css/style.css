@@ -2434,8 +2434,8 @@ img::selection {
   position: absolute;
   right: 0;
   bottom: -19.7rem;
-  border-bottom-left-radius: 5rem;
-  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 6rem;
+  border-top-left-radius: 6rem;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: none;
@@ -2453,6 +2453,7 @@ img::selection {
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
   visibility: hidden;
+  overflow: scroll;
 }
 
 .c-sidebar .c-nav {
@@ -2499,9 +2500,9 @@ img::selection {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
-  -webkit-transform: translateX(10%);
-      -ms-transform: translateX(10%);
-          transform: translateX(10%);
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 @media (max-width: 1307px) {
@@ -2924,6 +2925,8 @@ img::selection {
     width: 15rem;
     height: 13rem;
     bottom: -12.7rem;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
   }
 
   .c-sidebar .c-nav {
