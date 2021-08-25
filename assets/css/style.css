@@ -204,6 +204,125 @@ img::selection {
   height: auto;
 }
 
+.c-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.c-item-1 {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background-color: #F7FFF5;
+  -webkit-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  transition: 1.5s ease;
+  z-index: 9998;
+}
+
+.c-right-side {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.c-item-1 span {
+  color: silver;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.c-left-side span {
+  right: 0;
+}
+
+.c-right-side span {
+  left: 0;
+}
+
+.c-dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+  position: absolute;
+  top: 53%;
+}
+
+@-webkit-keyframes dot-light {
+  100% {
+    background-color: #F7FFF5;
+    -webkit-box-shadow: 0 0 10px #90C38A, 0 0 10px #90C38A;
+            box-shadow: 0 0 10px #90C38A, 0 0 10px #90C38A;
+  }
+}
+
+@keyframes dot-light {
+  100% {
+    background-color: #F7FFF5;
+    -webkit-box-shadow: 0 0 10px #90C38A, 0 0 10px #90C38A;
+            box-shadow: 0 0 10px #90C38A, 0 0 10px #90C38A;
+  }
+}
+
+.c-dot-1 {
+  right: 20px;
+}
+
+.c-dot-2 {
+  right: 5px;
+}
+
+.c-dot-3 {
+  left: 5px;
+}
+
+.c-dot-4 {
+  left: 20px;
+}
+
+.c-item-2 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F7FFF5;
+  z-index: 9997;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.c-item-3 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #90C38A;
+  z-index: 9996;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.c-item-4 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F7FFF5;
+  z-index: 9995;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
 .c-header {
   width: 100%;
   position: absolute;
@@ -1051,6 +1170,8 @@ img::selection {
   transition: 0.2s ease-out;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 1rem;
+  -webkit-filter: grayscale(0.3);
+          filter: grayscale(0.3);
 }
 
 .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item img.c-gallery__gigante {
@@ -1093,7 +1214,6 @@ img::selection {
 }
 
 .c-section-gallery .c-section-gallery__block .c-section-gallery-block__item:hover img {
-  border-radius: 1.5rem;
   -webkit-filter: blur(3px);
           filter: blur(3px);
   -webkit-transition: -webkit-transform 0.4s ease-out;
@@ -1104,6 +1224,8 @@ img::selection {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .sizer4 {
