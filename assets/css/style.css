@@ -1814,7 +1814,7 @@ img::selection {
 .c-modal {
   display: none;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -1830,6 +1830,7 @@ img::selection {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem 2rem;
 }
 
 .c-modal.show {
@@ -2257,7 +2258,7 @@ img::selection {
 
 .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__check .c-modal-detail-inner-check__info .c-modal-detail-inner-check-info__title {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: initial;
 }
 
@@ -2299,8 +2300,7 @@ img::selection {
 
 .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time .c-modal-detail-inner-time__title {
   font-weight: bold;
-  font-size: 17px;
-  line-height: 21px;
+  font-size: 1.7rem;
 }
 
 .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time .c-modal-detail-inner-time__sub {
@@ -2330,7 +2330,6 @@ img::selection {
 .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__txt {
   font-weight: normal;
   font-size: 1.5rem;
-  line-height: 27px;
 }
 
 .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__btn .c-gradient-btn {
@@ -2644,6 +2643,17 @@ img::selection {
     height: 20rem;
   }
 
+  .c-modal .c-modal__content .c-modal__close {
+    width: 2rem;
+    top: 3%;
+    right: 3%;
+  }
+
+  .c-modal .c-modal__content .c-modal__close img {
+    width: 100%;
+    height: auto;
+  }
+
   .c-modal-programme .c-modal .c-modal__content .c-modal-content__title {
     font-size: 3rem;
     margin: 1rem 0;
@@ -2781,6 +2791,88 @@ img::selection {
 
   .c-modal-format .c-modal .c-modal__content {
     max-width: 50rem;
+  }
+}
+
+@media (max-width: 855px) {
+  .c-modal-detail .c-modal .c-modal__content {
+    max-width: 53rem;
+    margin-top: 2rem;
+    padding: 4rem;
+    border-radius: 2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner {
+    margin-top: 2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__check {
+    margin-bottom: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__check .c-modal-detail-inner-check__dot {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__check .c-modal-detail-inner-check__info .c-modal-detail-inner-check-info__title {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__check .c-modal-detail-inner-check__info .c-modal-detail-inner-check-info__sub {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    max-width: 19rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__advantage {
+    margin-top: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__advantage .c-modal-detail-inner__advantage__title {
+    font-size: 1.8rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__advantage .c-modal-detail-inner__advantage__sub {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time {
+    margin-top: 2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time .c-modal-detail-inner-time__title {
+    font-size: 1.2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time .c-modal-detail-inner-time__sub {
+    font-size: 1.5rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer {
+    margin-top: 2.7rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__txt {
+    font-size: 1.2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__btn .c-gradient-btn {
+    width: 15rem;
+    height: 3.5rem;
+    border-radius: 0.8rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__btn .c-gradient-btn .c-gradient-btn__txt {
+    font-size: 1rem;
   }
 }
 
@@ -3021,6 +3113,10 @@ img::selection {
     border-radius: 2rem;
   }
 
+  .c-modal-programme .c-modal .c-modal__content .c-modal-programme__card .c-card-btn.online .c-card-btn__inner {
+    border-radius: 2rem;
+  }
+
   .c-modal-programme .c-modal .c-modal__content {
     max-width: 30rem;
     padding: 1rem;
@@ -3151,7 +3247,6 @@ img::selection {
     max-width: 30rem;
     padding: 3rem 5rem;
     margin: 0 1rem;
-    padding-bottom: 1rem;
   }
 
   .c-modal .c-modal__content .c-modal-content__title {
@@ -3223,15 +3318,6 @@ img::selection {
     font-size: 0.7rem;
     line-height: 1rem;
   }
-
-  .c-modal .c-modal__content .c-modal__close {
-    width: 2rem;
-  }
-
-  .c-modal .c-modal__content .c-modal__close img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media (max-width: 550px) {
@@ -3300,6 +3386,52 @@ img::selection {
 
   .c-textarea-block .c-textarea__btn {
     top: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .c-modal-detail .c-modal .c-modal__content {
+    padding: 3rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__advantage .c-modal-detail-inner__advantage__title {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__advantage .c-modal-detail-inner__advantage__sub {
+    font-size: 0.8rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__advantage .c-modal-detail-inner__advantage__sub {
+    font-size: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time .c-modal-detail-inner-time__title {
+    font-size: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__time .c-modal-detail-inner-time__sub {
+    margin-left: 1rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__txt {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__btn .c-gradient-btn {
+    width: 11rem;
+    height: 3rem;
+  }
+
+  .c-modal-detail .c-modal .c-modal__content .c-modal-detail__inner .c-modal-detail-inner__footer .c-modal-detail-inner-footer__btn .c-gradient-btn .c-gradient-btn__txt {
+    font-size: 0.8rem;
   }
 }
 
