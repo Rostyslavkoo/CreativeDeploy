@@ -223,23 +223,45 @@ wrapper.addEventListener('click', (event) => {
     sidebar.classList.remove('active-sidebar')
     document.body.classList.remove('active-burger')
 })
-document.body.onload = function()
-{
-    $(".c-dot-1").css("animation", "dot-light 2s 0s forwards");
-    $(".c-dot-2").css("animation", "dot-light 2s 0.75s forwards");
-    $(".c-dot-3").css("animation", "dot-light 2s 1.5s forwards");
-    $(".c-dot-4").css("animation", "dot-light 2s 2.25s forwards");
-    setTimeout(function(){$(".c-item-1").css("width", "0");}, 4000);
-    setTimeout(function(){$(".c-item-2").css("height", "0");}, 5000);
-    setTimeout(function(){$(".c-item-3").css("height", "0");}, 5300);
-    setTimeout(function(){$(".c-item-4").css("height", "0");}, 5500);
- 
-    setTimeout(function(){$(".c-header").css({"opacity":"1", "transform":"translate(0)"});}, 6100);
-    setTimeout(function(){$(".c-p-1").css({"opacity":"1", "transform":"translate(0)"});}, 6300);
-    setTimeout(function(){$(".c-p-2").css({"opacity":"1", "transform":"translate(0)"});}, 6500);
-    setTimeout(function(){$(".c-p-3").css({"opacity":"1", "transform":"translate(0)"});}, 6700);
- 
-    setTimeout(function(){$(".c-preloader").css("visibility", "hidden");}, 7000);
+const txt = ['Креатив...']
+
+function typeText() {
+    let line = 0;
+    let count = 0;
+    let out = '';
+    let htmlOut = document.querySelector('.c-out')
+
+    function typeLine() {
+        let interval = setTimeout(() => {
+            out += txt[line][count];
+            htmlOut.innerHTML = out + '|';
+            count++;
+            if (count >= txt[line].length) {
+                count = 0;
+                line++;
+                if (line == txt.length) {
+                    clearTimeout(interval); // очистка таймаута
+                    htmlOut.innerHTML = out;
+                    return true
+
+                }
+
+            }
+
+            typeLine();
+        }, 300)
+    }
+    typeLine();
+
+}
+typeText();
+
+window.onload = function() {
+    let preloader = document.querySelector('.c-preloader')
+    body.classList.add('c-hide-preloader')
+    setTimeout(() => {
+        body.classList.add('c-preloader-hidden')
+    })
 }
 
 
