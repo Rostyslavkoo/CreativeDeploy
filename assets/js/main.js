@@ -264,11 +264,11 @@ wrapper.addEventListener('click', (event) => {
     body.onload = function() {
         setTimeout(() => {
             body.classList.add('c-hide-preloader')
+                body.classList.remove('preloader-active')
 
             setTimeout(function() {
                 body.classList.add('c-preloader-hidden')
                 body.classList.remove('no-scroll')
-                body.classList.remove('preloader-active')
                 setTimeout(() => {
                     body.style.transform = "none"
                     body.style.opacity = "1"
