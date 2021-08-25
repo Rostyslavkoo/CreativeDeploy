@@ -223,12 +223,20 @@ img::selection {
           align-items: center;
 }
 
-.c-preloader .c-preloader__content {
+.c-preloader .c-preloader__wrapper {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.c-preloader .c-preloader__content,
+.c-preloader .c-text-cursor {
   font-weight: 900;
   font-size: 3.3rem;
   letter-spacing: 0.21em;
   background: -o-linear-gradient(167.59deg, #F46362 49.38%, #F26788 89.69%);
   background: linear-gradient(282.41deg, #F46362 49.38%, #F26788 89.69%);
+  width: 25rem;
   color: #F46362;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -241,13 +249,14 @@ img::selection {
           transform: scale(1);
 }
 
-.c-hide-preloader .c-preloader .c-preloader__content {
+.c-hide-preloader .c-preloader .c-preloader__content,
+.c-hide-preloader .c-preloader .c-text-cursor {
   -webkit-transition: 0.3s linear;
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
-  -webkit-transform: scale(5);
-      -ms-transform: scale(5);
-          transform: scale(5);
+  -webkit-transform: scale(0.3);
+      -ms-transform: scale(0.3);
+          transform: scale(0.3);
   opacity: 0;
 }
 
@@ -256,14 +265,44 @@ img::selection {
   -webkit-transition: 0.3s linear;
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
-  -webkit-transform: scale(5);
-      -ms-transform: scale(5);
-          transform: scale(5);
 }
 
 .c-preloader-hidden .c-preloader {
   display: none;
   visibility: hidden;
+}
+
+.c-text-cursor {
+  top: 0;
+  left: 25rem;
+  position: absolute;
+  visibility: hidden;
+  -webkit-animation: textCursor 500ms steps(40) infinite normal;
+          animation: textCursor 500ms steps(40) infinite normal;
+}
+
+.c-text-cursor.active-cursor {
+  visibility: visible;
+}
+
+@-webkit-keyframes textCursor {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes textCursor {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 .c-header {
@@ -666,6 +705,13 @@ img::selection {
 
 .c-wrapper {
   overflow: hidden;
+}
+
+.preloader-active .c-wrapper {
+  visibility: hidden;
+  -webkit-transition: 5s;
+  -o-transition: 5s;
+  transition: 5s;
 }
 
 .c-section-swiper {
