@@ -2143,13 +2143,19 @@ img::selection {
 
 .c-modal-format .c-modal .c-modal__content .c-modal-format__card {
   margin-top: 7rem;
-  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn {
+  margin-bottom: 3rem;
+  margin-right: 3rem;
 }
 
 .c-modal-programme .c-modal .c-modal__content {
@@ -2705,6 +2711,24 @@ img::selection {
   }
 }
 
+@media (max-width: 927px) {
+  .c-modal-format .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 2.5rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content .c-modal-format__card {
+    margin-top: 3rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn {
+    margin-right: 0;
+  }
+
+  .c-modal-format .c-modal .c-modal__content {
+    max-width: 50rem;
+  }
+}
+
 @media (max-width: 840px) {
   .c-section-about .c-section-about__title {
     font-size: 3rem;
@@ -3041,6 +3065,27 @@ img::selection {
     line-height: 12px;
     max-height: 14.5rem;
     overflow-y: scroll;
+  }
+}
+
+@media (max-width: 550px) {
+  .c-modal-format .c-modal .c-modal__content .c-modal-content__title {
+    font-size: 2rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn {
+    width: 20rem;
+    height: 15rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content .c-modal-format__card .c-card-btn .c-card-btn__inner .c-card-btn__title {
+    font-size: 2rem;
+  }
+
+  .c-modal-format .c-modal .c-modal__content {
+    max-width: 30rem;
   }
 }
 
