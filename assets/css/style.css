@@ -229,6 +229,16 @@ img::selection {
   position: relative;
 }
 
+.c-hide-preloader .c-preloader .c-preloader__wrapper {
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transform: scale(0.3);
+      -ms-transform: scale(0.3);
+          transform: scale(0.3);
+  opacity: 0;
+}
+
 .c-preloader .c-preloader__content,
 .c-preloader .c-text-cursor {
   font-weight: 900;
@@ -247,17 +257,6 @@ img::selection {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
-}
-
-.c-hide-preloader .c-preloader .c-preloader__content,
-.c-hide-preloader .c-preloader .c-text-cursor {
-  -webkit-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
-  transition: 0.3s linear;
-  -webkit-transform: scale(0.3);
-      -ms-transform: scale(0.3);
-          transform: scale(0.3);
-  opacity: 0;
 }
 
 .c-hide-preloader .c-preloader {
