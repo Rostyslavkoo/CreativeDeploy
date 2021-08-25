@@ -3550,6 +3550,17 @@ img::selection {
     padding: 0 3.8rem;
   }
 
+  .c-preloader .c-preloader__content,
+  .c-preloader .c-text-cursor {
+    font-size: 2.3rem;
+    letter-spacing: 0.21em;
+    width: 18rem;
+  }
+
+  .c-text-cursor {
+    left: 18rem;
+  }
+
   .c-header .c-header-logo-obj img {
     max-width: 4rem;
     min-width: 4rem;
