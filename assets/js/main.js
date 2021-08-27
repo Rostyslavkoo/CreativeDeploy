@@ -233,7 +233,7 @@ if (animItems.length > 0) {
     function animOnScroll() {
         for (let i = 0; i < animItems.length; i++) {
             const animItem = animItems[i]; // об'єкт
-            const animItemHeight = animItem.offsetHeight;// висота об'єкта
+            const animItemHeight = animItem.offsetHeight; // висота об'єкта
             const animItemOffset = offset(animItem).top // позиція об'єкта
             const animItemStart = 4; // коефіцієнт
 
@@ -258,6 +258,7 @@ if (animItems.length > 0) {
 
     let preloader = document.querySelector('.c-preloader');
     body.onload = function() {
+
         setTimeout(() => {
             body.classList.add('c-hide-preloader')
             body.classList.remove('preloader-active')
@@ -265,7 +266,9 @@ if (animItems.length > 0) {
             setTimeout(function() {
                 body.classList.add('c-preloader-hidden')
                 body.classList.remove('no-scroll')
-                animOnScroll()
+                animOnScroll();
+                                window.scrollTo(0, 0);
+
             }, 100)
 
         }, 999)
