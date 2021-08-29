@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     imagesLoaded(galleryBlock).on('progress', function() {
         var msnry = new Masonry(galleryBlock, {
             itemSelctor: '.c-section-gallery-block__item ',
-            columWidth: 2000,
             percentPosition: true,
             gutter: 6,
         });
