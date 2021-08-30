@@ -316,6 +316,7 @@ if (animItems.length > 0) {
         typeLine();
 
     }
+    typeText();
 setInterval(()=>{
        typeText();
     cursorObj.classList.remove('active-cursor'); 
