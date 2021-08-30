@@ -253,25 +253,25 @@ if (animItems.length > 0) {
     }
 
 
-animOnScroll()
+
 
     let preloader = document.querySelector('.c-preloader');
-    // body.onload = function() {
+    body.onload = function() {
 
-    //     setTimeout(() => {
-    //         body.classList.add('c-hide-preloader')
-    //         body.classList.remove('preloader-active')
+        setTimeout(() => {
+            body.classList.add('c-hide-preloader')
+            body.classList.remove('preloader-active')
 
-    //         setTimeout(function() {
-    //             body.classList.add('c-preloader-hidden')
-    //             body.classList.remove('no-scroll')
-    //             animOnScroll();
-    //                             window.scrollTo(0, 0);
+            setTimeout(function() {
+                body.classList.add('c-preloader-hidden')
+                body.classList.remove('no-scroll')
+                animOnScroll();
+                                window.scrollTo(0, 0);
 
-    //         }, 100)
+            }, 100)
 
-    //     }, 999)
-    // }
+        }, 999)
+    }
 
     function offset(el) {
         const rect = el.getBoundingClientRect(),
