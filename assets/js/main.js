@@ -311,7 +311,7 @@ if (animItems.length > 0) {
                 }
 
                 typeLine();
-            }, 100)
+            }, 150)
         }
         typeLine();
 
