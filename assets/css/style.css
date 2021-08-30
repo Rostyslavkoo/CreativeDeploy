@@ -2285,6 +2285,11 @@ img::selection {
   background: linear-gradient(298.28deg, rgba(222, 242, 220, 0.33) 30.24%, rgba(244, 255, 243, 0.81) 91.19%);
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+#map {
+  height: 26rem;
 }
 
 .footer {

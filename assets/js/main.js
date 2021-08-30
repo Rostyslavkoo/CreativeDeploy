@@ -285,15 +285,22 @@ if (animItems.length > 0) {
     }
 
 }
-var map = L.map('map').setView([51.505, -0.09], 13);
 
+var map = L.map('map', {
+    center: [48.5272835313596, 25.035663911309364],
+    zoom: 17
+});
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+L.marker([48.5272835313596, 25.035663911309364]).addTo(map)
+    .bindPopup('Школа музики «Креатив»')
     .openPopup();
+
+
+
+
 
     const txt = ['Креатив...']
     const cursor = document.querySelector('.c-text-cursor').innerHTML
