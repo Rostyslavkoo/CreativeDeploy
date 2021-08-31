@@ -304,6 +304,17 @@ L.marker([48.5272835313596, 25.035663911309364]).addTo(map)
 
 
 
+$(document).on('click', function (e) {
+	$('<div class="cursor">')
+		.css({
+			top: e.clientY,
+			left: e.clientX
+		})
+		.appendTo($(document.body))
+		.on('animationend webkitAnimationEnd', function (e) {
+			$(this).remove();
+		});
+});
 
 
     const txt = ['Креатив...']

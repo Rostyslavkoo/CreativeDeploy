@@ -3226,6 +3226,54 @@ img::selection {
           transform: translateX(0%);
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0.8;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+
+  70% {
+    opacity: 0.3;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0.8;
+    -webkit-transform: scale(0.5, 0.5);
+  }
+
+  70% {
+    opacity: 0.3;
+    -webkit-transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5, 0.5);
+  }
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  background: #ef2c68;
+  animation: appear 0.2s;
+  -webkit-animation: appear 0.2s;
+}
+
 @media (max-width: 1307px) {
   .c-wrapper-programm {
     left: 10%;
