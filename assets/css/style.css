@@ -406,6 +406,8 @@ img::selection {
 }
 
 .c-header .c-header__phone {
+  -webkit-animation: contacts 800ms steps(200) infinite normal;
+          animation: contacts 800ms steps(200) infinite normal;
   margin: 0.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2476,6 +2478,12 @@ img::selection {
   opacity: 0.6;
 }
 
+.footer .c-container .c-footer__contacts {
+  -webkit-animation: contacts 800ms steps(200) infinite normal;
+          animation: contacts 800ms steps(200) infinite normal;
+  position: relative;
+}
+
 .footer .c-container .c-footer__contacts .c-footer__phone {
   margin: 0.5rem 0;
   display: -webkit-box;
@@ -2510,6 +2518,40 @@ img::selection {
   -webkit-transition: 0.1s ease 0s;
   -o-transition: 0.1s ease 0s;
   transition: 0.1s ease 0s;
+}
+
+@-webkit-keyframes contacts {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes contacts {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .c-modal {
